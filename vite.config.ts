@@ -42,12 +42,6 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
-        manualChunks: {
-          "vendor-react": ["react", "react-dom"],
-          "vendor-ui": ["@radix-ui/react-accordion", "@radix-ui/react-tooltip"],
-          "vendor-form": ["react-hook-form", "@hookform/resolvers", "zod"],
-          "vendor-icons": ["lucide-react", "react-icons"],
-        },
       },
     },
   },
