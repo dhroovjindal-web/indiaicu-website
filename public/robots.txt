@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://indiaicu.in/sitemap.xml
+Sitemap: https://www.indiaicu.com/sitemap.xml
 
 # Crawl-delay (respectful, helps budget allocation)
 Crawl-delay: 1
