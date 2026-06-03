@@ -49,7 +49,7 @@ export function ContactSection() {
 
     trackFormSubmit();
 
-    const url = `https://wa.me/91${PHONE_NUMBER}?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/918901434261?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank", "noreferrer");
     form.reset();
   }
@@ -83,7 +83,7 @@ export function ContactSection() {
               </a>
 
               <a
-                href={`https://wa.me/91${PHONE_NUMBER}`}
+href={"https://wa.me/918901434261"}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackWhatsApp("contact-section")}
