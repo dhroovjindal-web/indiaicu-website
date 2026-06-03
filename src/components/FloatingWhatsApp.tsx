@@ -6,7 +6,7 @@ const PHONE_NUMBER = "8901434774";
 export function FloatingWhatsApp() {
   return (
     <a
-      href={`https://wa.me/91${PHONE_NUMBER}`}
+href={"https://wa.me/918901434261"}
       target="_blank"
       rel="noreferrer"
       onClick={() => trackWhatsApp("floating-button")}
