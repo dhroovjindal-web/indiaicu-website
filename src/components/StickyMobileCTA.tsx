@@ -20,7 +20,7 @@ export function StickyMobileCTA() {
       </a>
       <div className="w-px bg-white/20" />
       <a 
-        href={`https://wa.me/91${PHONE_NUMBER}`}
+        href={"https://wa.me/918901434261"}
         target="_blank"
         rel="noreferrer"
         onClick={() => trackWhatsApp("sticky-bar")}
