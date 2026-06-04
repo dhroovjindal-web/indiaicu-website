@@ -29,7 +29,7 @@ href={"https://wa.me/918901434261"}
       >
         <FaWhatsapp className="h-5 w-5" />
         <span className="text-xs font-bold">WhatsApp</span>
-        <span className="text-[10px] font-medium opacity-90">{PHONE_DISPLAY}</span>
+        <span className="text-[10px] font-medium opacity-90">89014 34261</span>
       </a>
     </div>
   );
