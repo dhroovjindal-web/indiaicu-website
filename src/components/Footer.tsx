@@ -184,7 +184,7 @@ export function Footer() {
             </ul>
             <div className="mt-6 p-4 rounded-lg bg-card border border-border/60">
               <p className="text-xs text-muted-foreground leading-relaxed">
-                <span className="text-white font-semibold block mb-1">Serving 50+ cities across India</span>
+                <span className="text-gray-800 font-semibold block mb-1">Serving 50+ cities across India</span>
                 ICU, oxygen, ventilator, and basic ambulance services available in Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, and more.
               </p>
             </div>
