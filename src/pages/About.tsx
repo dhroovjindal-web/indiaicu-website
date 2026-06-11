@@ -112,7 +112,8 @@ export default function About() {
             <h2 className="font-heading text-xl font-bold text-foreground mb-3">Contact Us</h2>
             <div className="space-y-2 text-sm text-muted-foreground">
               <p><strong className="text-foreground">Legal Name:</strong> Dhroov Jindal (operating as IndiaICU)</p>
-              <p>   <strong className="text-foreground">Location:</strong>   {" "}H No. 126, Gali Chabbil Das, Gandhi Chowk, Hisar, Haryana, India </p>
+              <p>   <strong className="text-foreground">Location:</strong>   {" "}S/O: Anil Kumar, house no-8/126, chbila dass ki gali, delhi gate
+Hisar, Haryana, India </p>
               <p><strong className="text-foreground">Support:</strong>{" "}
                 <a href={PHONE_TEL} className="text-primary font-semibold hover:underline">{PHONE_DISPLAY}</a>
                 {" "}(24/7 Dispatch)
