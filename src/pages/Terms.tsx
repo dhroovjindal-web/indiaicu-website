@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { PageLayout } from "@/components/PageLayout";
 
 const LAST_UPDATED = "11 June 2026";
@@ -27,7 +28,7 @@ export default function Terms() {
 
             <Section title="1. Definitions">
               <ul className="space-y-2">
-                <li><strong className="text-foreground">"IndiaICU refers to the digital aggregator platform operated by Dhroov Jindal (Sole Proprietor), Hisar, Haryana, India.</li>
+                <li>   <strong className="text-foreground">"IndiaICU"</strong> refers to the digital aggregator platform operated by Dhroov Jindal (Sole Proprietor), Hisar, Haryana, India. </li>
                 <li><strong className="text-foreground">"Platform"</strong> refers to the IndiaICU website and dispatch contact number.</li>
                 <li><strong className="text-foreground">"Partner Fleet"</strong> refers to the independent third-party ambulance vehicle operators in IndiaICU's network.</li>
                 <li><strong className="text-foreground">"User"</strong> refers to any individual who accesses the Platform or contacts IndiaICU for dispatch coordination.</li>
@@ -129,7 +130,7 @@ export default function Terms() {
   );
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div className="space-y-3">
       <h2 className="font-heading text-lg font-bold text-foreground">{title}</h2>
