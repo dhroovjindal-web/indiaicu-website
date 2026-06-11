@@ -28,7 +28,8 @@ export default function Privacy() {
               <p>
                 The data controller for information collected through this Platform is:
                 <br /><strong className="text-foreground">Dhroov Jindal (operating as IndiaICU)</strong>
-                <br />H No. 126, Gali Chabbil Das, Gandhi Chowk, Hisar, Haryana, India
+                <br />S/O: Anil Kumar, house no-8/126, chbila dass ki gali, delhi gate
+Hisar, Haryana, India
                 <br /><a href="mailto:dhroovjindal@gmail.com" className="text-primary underline">dhroovjindal@gmail.com</a>
                 {" | "}
                 <a href={PHONE_TEL} className="text-primary underline">{PHONE_DISPLAY}</a>
@@ -114,7 +115,8 @@ export default function Privacy() {
               </p>
               <div className="mt-3 p-4 rounded-lg bg-card border border-border text-foreground">
                 <p className="font-semibold">Dhroov Jindal</p>
-                <p className="text-muted-foreground">Operating as IndiaICU, H No. 126, Gali Chabbil Das, Gandhi Chowk, Hisar, Haryana, India</p>
+                <p className="text-muted-foreground">Operating as IndiaICU, S/O: Anil Kumar, house no-8/126, chbila dass ki gali, delhi gate
+Hisar, Haryana, India</p>
                 <p className="text-muted-foreground">
                   Email: <a href="mailto:dhroovjindal@gmail.com" className="text-primary underline">dhroovjindal@gmail.com</a>
                 </p>
