@@ -1,4 +1,4 @@
-import { Phone, Clock, MapPin, UserCheck, ShieldCheck } from "lucide-react";
+import { Phone, Clock, MapPin, ShieldCheck, Network } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 
@@ -10,7 +10,7 @@ export function HeroSection() {
     <section className="relative min-h-[90vh] flex items-center pt-16 pb-52 overflow-hidden bg-[#0d1b35]">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <img
           src="/hero-ambulance.webp"
           alt="Emergency ICU Ambulance"
           width={1408}
@@ -24,23 +24,26 @@ export function HeroSection() {
       </div>
 
       <div className="container relative z-10 mx-auto px-4">
-        <div className="max-w-3xl space-y-8">
-          <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary backdrop-blur-sm">
-            <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse" />
-            Dispatching 24/7 Across India
+        <div className="max-w-3xl space-y-7">
+          {/* Aggregator badge — explicit identity */}
+          <div className="inline-flex items-center rounded-full border border-blue-400/40 bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-300 backdrop-blur-sm">
+            <Network className="mr-2 h-4 w-4" />
+            Ambulance Aggregator &amp; Dispatch Network
           </div>
-          
-          <h1 className="font-heading text-5xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl leading-[1.1]">
-            24/7 Emergency <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">ICU Ambulance</span> <br/>
-            Service
+
+          <h1 className="font-heading text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.1]">
+            India's Emergency{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
+              Ambulance Aggregator
+            </span>{" "}
+            &amp; Dispatch Network
           </h1>
-          
+
           <p className="text-xl text-blue-100/80 font-medium max-w-2xl leading-relaxed">
-            Fast ICU, Oxygen, Ventilator & Intercity Ambulance support across India. Manned by critical care specialists.
+            IndiaICU connects you with verified third-party ICU, oxygen, ventilator, and intercity ambulance fleets across India — available 24/7.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <a
               href={`tel:+91${PHONE_NUMBER}`}
               onClick={() => trackPhoneCall("hero")}
@@ -48,7 +51,7 @@ export function HeroSection() {
               data-testid="button-hero-call"
             >
               <Phone className="mr-3 h-5 w-5" />
-              Call Now: {PHONE_DISPLAY}
+              Call Dispatch: {PHONE_DISPLAY}
             </a>
             <a
               href={`https://wa.me/918901434261`}
@@ -62,6 +65,12 @@ export function HeroSection() {
               WhatsApp Us
             </a>
           </div>
+
+          {/* Google Ads compliance disclaimer */}
+          <div className="rounded-lg border border-white/10 bg-white/5 px-5 py-4 text-sm text-blue-100/70 leading-relaxed max-w-2xl">
+            <strong className="text-white/90 font-semibold">Disclaimer:</strong>{" "}
+            IndiaICU is an independent digital aggregator and dispatch network. We connect you with verified third-party ambulance providers. We are not a direct medical provider, hospital, or ambulance owner.
+          </div>
         </div>
       </div>
 
@@ -71,19 +80,19 @@ export function HeroSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-semibold">
             <div className="flex items-center gap-3">
               <Clock className="h-5 w-5 flex-shrink-0 text-primary" />
-              <span className="text-white">24/7 Emergency Support</span>
+              <span className="text-white">24/7 Dispatch Support</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 flex-shrink-0 text-blue-400" />
-              <span className="text-white">PAN India Ambulance Network</span>
+              <span className="text-white">PAN India Network</span>
             </div>
             <div className="flex items-center gap-3">
               <ShieldCheck className="h-5 w-5 flex-shrink-0 text-primary" />
-              <span className="text-white">Fast Emergency Response</span>
+              <span className="text-white">Partner Fleet Verified</span>
             </div>
             <div className="flex items-center gap-3">
-              <UserCheck className="h-5 w-5 flex-shrink-0 text-blue-400" />
-              <span className="text-white">Trained Medical Staff</span>
+              <Network className="h-5 w-5 flex-shrink-0 text-blue-400" />
+              <span className="text-white">Aggregator &amp; Coordinator</span>
             </div>
           </div>
         </div>
