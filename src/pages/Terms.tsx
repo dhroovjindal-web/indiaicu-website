@@ -93,7 +93,7 @@ export default function Terms() {
             </Section>
 
             <Section title="10. Governing Law and Jurisdiction">
-              <p>These Terms shall be governed by the laws of India, including the Information Technology Act, 2000, and the Consumer Protection Act, 2019. Any disputes shall be subject to the exclusive jurisdiction of the courts in Delhi, India.</p>
+              <p>These Terms shall be governed by the laws of India, including the Information Technology Act, 2000, and the Consumer Protection Act, 2019. Any disputes shall be subject to the exclusive jurisdiction of the courts in Hisar, Haryana, India.</p>
             </Section>
 
             <Section title="11. Amendments">
