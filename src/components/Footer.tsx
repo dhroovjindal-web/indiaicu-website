@@ -69,7 +69,9 @@ export function Footer() {
               <p className="text-white font-semibold text-xs uppercase tracking-wider mb-3">Legal Entity</p>
               <div className="flex items-start gap-2.5">
                 <MapPin className="h-4 w-4 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span>   Dhroov Jindal (Operating as IndiaICU)   <br />   H No. 126, Gali Chabbil Das,   <br />   Gandhi Chowk, Hisar,   <br />   Haryana, India </span>
+                <span>   Dhroov Jindal (Operating as IndiaICU)
+S/O: Anil Kumar, house no-8/126, chbila dass ki gali, delhi gate
+Hisar, Haryana, India </span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-blue-400 flex-shrink-0" />
