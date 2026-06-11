@@ -1,5 +1,6 @@
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 
 const PHONE_NUMBER = "8901434774";
@@ -11,25 +12,26 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Cities", href: "#cities" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/#services" },
+    { name: "About", href: "/about" },
+    { name: "Cities", href: "/#cities" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "FAQ", href: "/#faq" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-sm">
       <div className="container flex h-16 items-center justify-between mx-auto px-4">
         <div className="flex items-center gap-2">
-          <a href="#" className="flex items-center gap-2" data-testid="link-logo">
+          <Link href="/" className="flex items-center gap-2" data-testid="link-logo">
             <span className="font-heading text-2xl font-bold tracking-tight text-[#0d1b35]">India<span className="text-primary">ICU</span></span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex gap-6">
+          <div className="flex gap-5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
