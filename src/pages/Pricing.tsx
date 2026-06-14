@@ -39,7 +39,7 @@ export default function Pricing() {
                   <tr>
                     <th className="text-left px-5 py-4 font-semibold text-foreground">Service Type</th>
                     <th className="text-left px-5 py-4 font-semibold text-foreground">Base Fare (approx.)</th>
-                    <th className="text-left px-5 py-4 font-semibold text-foreground">Per KM (approx.)</th>
+                    
                     <th className="text-left px-5 py-4 font-semibold text-foreground">Notes</th>
                   </tr>
                 </thead>
@@ -48,38 +48,37 @@ export default function Pricing() {
                     {
                       type: "Basic Ambulance",
                       base: "₹1,000 – ₹1,500",
-                      perKm: "₹25 – ₹35",
+                      
                       note: "Non-critical transport",
                     },
                     {
                       type: "Oxygen Ambulance",
                       base: "₹1,500 – ₹2,500",
-                      perKm: "₹35 – ₹45",
+                      
                       note: "Oxygen cylinder included",
                     },
                     {
                       type: "ICU Ambulance",
                       base: "₹3,000 – ₹6,000",
-                      perKm: "₹50 – ₹80",
+                      
                       note: "Ventilator, monitor, defibrillator",
                     },
                     {
                       type: "Intercity ICU Transfer",
                       base: "₹8,000 – ₹20,000+",
-                      perKm: "₹55 – ₹90",
+                      
                       note: "Quote confirmed before dispatch",
                     },
                     {
                       type: "Dead Body Freezer Box",
                       base: "₹2,000 – ₹4,000",
-                      perKm: "₹30 – ₹50",
+                      
                       note: "Home placement or transport",
                     },
                   ].map((row) => (
                     <tr key={row.type} className="hover:bg-card/50 transition-colors">
                       <td className="px-5 py-4 font-medium text-foreground">{row.type}</td>
                       <td className="px-5 py-4 text-muted-foreground">{row.base}</td>
-                      <td className="px-5 py-4 text-muted-foreground">{row.perKm}</td>
                       <td className="px-5 py-4 text-muted-foreground">{row.note}</td>
                     </tr>
                   ))}
@@ -126,20 +125,20 @@ export default function Pricing() {
                   },
                   {
                     stage: "After dispatch, before ambulance departs",
-                    fee: "₹200 – ₹300 coordination fee",
+                    fee: "₹500 – ₹1000 coordination fee",
                     detail: "A nominal coordination fee may apply to cover the dispatch effort once a fleet partner has been assigned.",
                     color: "text-amber-600",
                   },
                   {
-                    stage: "Ambulance already en route",
-                    fee: "Partial fare may apply",
-                    detail: "If the ambulance has already been dispatched and is en route, a partial fare (typically the base fare) may be charged by the fleet operator.",
+                    stage: "Ambulance already on route",
+                    fee: "50% cancellation fee",
+                    detail: "If the ambulance has already been dispatched and is on route, 50% of the total fee may be charged by the fleet operator.",
                     color: "text-orange-600",
                   },
                   {
                     stage: "Ambulance arrived at pickup location",
-                    fee: "Minimum fare applicable",
-                    detail: "Once the vehicle has arrived, the minimum base fare for that service type is payable.",
+                    fee: "100% cancellation fee",
+                    detail: "Once the vehicle has arrived, 100% cancellation fee for that service type is payable.",
                     color: "text-red-600",
                   },
                 ].map((row) => (
