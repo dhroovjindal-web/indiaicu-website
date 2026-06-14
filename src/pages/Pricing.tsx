@@ -153,16 +153,7 @@ export default function Pricing() {
               </div>
             </div>
 
-            <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-5 py-4 flex gap-3">
-              <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
-              <div className="text-sm text-amber-800 space-y-1">
-                <p><strong>Refund Process:</strong> Payments are made directly to the third-party fleet operator. Refund disputes should be raised with the operator first. IndiaICU will assist in mediation but cannot be held liable for amounts paid directly to fleet operators.</p>
-                <p>For any billing concerns, email <a href="mailto:dhroovjindal@gmail.com" className="underline font-semibold">dhroovjindal@gmail.com</a> or call{" "}
-                  <a href={PHONE_TEL} className="underline font-semibold">{PHONE_DISPLAY}</a>.
-                </p>
-              </div>
-            </div>
-          </div>
+
 
           {/* How to get a quote */}
           <div className="rounded-xl border border-border bg-card p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
