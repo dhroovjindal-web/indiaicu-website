@@ -34,9 +34,8 @@ export function HeroSection() {
           <h1 className="font-heading text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.1]">
             India's 24/7 Emergency{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
-              Ambulance
+              Ambulance Service
             </span>{" "}
-            &amp; Service
           </h1>
 
           <p className="text-xl text-blue-100/80 font-medium max-w-2xl leading-relaxed">
