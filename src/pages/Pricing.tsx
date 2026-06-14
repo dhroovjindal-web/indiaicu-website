@@ -150,7 +150,9 @@ export default function Pricing() {
                     <p className="text-sm text-muted-foreground">{row.detail}</p>
                   </div>
                 ))}
-           
+               </div>
+  </div>
+</div>
 
 
 
