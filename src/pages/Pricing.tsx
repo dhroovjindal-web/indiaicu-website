@@ -174,7 +174,7 @@ export default function Pricing() {
             </div>
           </div>
 
-       
+        </div> {/* Add this missing closing div right here! */}
       </section>
     </PageLayout>
   );
