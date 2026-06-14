@@ -66,10 +66,7 @@ export function Footer() {
               IndiaICU is India’s premier emergency medical transit and dispatch network. We integrate national ICU, oxygen, and cardiac ambulance infrastructure into a single unified response system to deliver rapid emergency coordination 24/7.
             </p>
             <div className="space-y-2.5 text-sm text-muted-foreground">
-              <p className="text-white font-semibold text-xs uppercase tracking-wider mb-3">Legal Entity</p>
-              <div className="flex items-start gap-2.5">
-                <MapPin className="h-4 w-4 text-blue-400 flex-shrink-0 mt-0.5" />
-              </div>
+              <p className="text-white font-semibold text-xs uppercase tracking-wider mb-3">Contact us</p>
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-blue-400 flex-shrink-0" />
                 <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-white transition-colors">
