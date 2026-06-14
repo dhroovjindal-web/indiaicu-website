@@ -7,7 +7,7 @@ const PHONE_DISPLAY = "89014 34774";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[75vh] flex items-center pt-16 pb-24 overflow-hidden bg-[#0d1b35]">
+    <section className="relative min-h-[75vh] flex items-center pt-16 pb-32 overflow-hidden bg-[#0d1b35]">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img
