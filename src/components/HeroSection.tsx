@@ -32,15 +32,15 @@ export function HeroSection() {
           </div>
 
           <h1 className="font-heading text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.1]">
-            India's Emergency{" "}
+            India's 24/7 Emergency{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
-              Ambulance Aggregator
+              Ambulance
             </span>{" "}
-            &amp; Dispatch Network
+            &amp; Service
           </h1>
 
           <p className="text-xl text-blue-100/80 font-medium max-w-2xl leading-relaxed">
-            IndiaICU connects you with verified third-party ICU, oxygen, ventilator, and intercity ambulance fleets across India — available 24/7.
+            Book verified ICU, oxygen, and cardiac ambulances instantly. Available 24/7 for immediate dispatch across India.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -64,12 +64,6 @@ export function HeroSection() {
               <FaWhatsapp className="mr-3 h-6 w-6" />
               WhatsApp Us
             </a>
-          </div>
-
-          {/* Google Ads compliance disclaimer */}
-          <div className="rounded-lg border border-white/10 bg-white/5 px-5 py-4 text-sm text-blue-100/70 leading-relaxed max-w-2xl">
-            <strong className="text-white/90 font-semibold">Disclaimer:</strong>{" "}
-            IndiaICU is an independent digital aggregator and dispatch network. We connect you with verified third-party ambulance providers. We are not a direct medical provider, hospital, or ambulance owner.
           </div>
         </div>
       </div>
