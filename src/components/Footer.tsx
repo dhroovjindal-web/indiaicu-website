@@ -6,7 +6,7 @@ const PHONE_NUMBER = "8901434774";
 const PHONE_DISPLAY = "89014 34774";
 const PHONE_TEL = `tel:+91${PHONE_NUMBER}`;
 const WHATSAPP_URL = `https://wa.me/918901434261`;
-const SUPPORT_EMAIL = "dhroovjindal@gmail.com";
+const SUPPORT_EMAIL = "connect.indiaicu@gmail.com";
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
