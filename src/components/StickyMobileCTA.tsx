@@ -1,3 +1,4 @@
+import React from "react";
 import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
@@ -10,7 +11,7 @@ export function StickyMobileCTA() {
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex h-16 shadow-[0_-4px_24px_rgba(0,0,0,0.6)] border-t border-white/10">
       <a 
         href={`tel:+91${PHONE_NUMBER}`}
-        onClick={() => trackPhoneCall("sticky-bar")}
+        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackPhoneCall(e, `tel:+91${PHONE_NUMBER}`, "sticky-bar")}
         className="flex-1 flex flex-col items-center justify-center gap-0.5 bg-primary text-primary-foreground font-bold active:brightness-90 transition-all"
         data-testid="mobile-cta-call"
       >
@@ -20,10 +21,10 @@ export function StickyMobileCTA() {
       </a>
       <div className="w-px bg-white/20" />
       <a 
-href={"https://wa.me/918901434261"}
+        href={"https://wa.me/918901434261"}
         target="_blank"
         rel="noreferrer"
-        onClick={() => trackWhatsApp("sticky-bar")}
+        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackWhatsApp(e, "https://wa.me/918901434261", "sticky-bar")}
         className="flex-1 flex flex-col items-center justify-center gap-0.5 bg-[#25D366] text-white font-bold active:brightness-90 transition-all"
         data-testid="mobile-cta-whatsapp"
       >
