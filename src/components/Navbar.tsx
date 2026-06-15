@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import { useState } from "react";
 import { Link } from "wouter";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 
@@ -25,7 +25,9 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between mx-auto px-4">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2" data-testid="link-logo">
-            <span className="font-heading text-2xl font-bold tracking-tight text-[#0d1b35]">India<span className="text-primary">ICU</span></span>
+            <span className="font-heading text-2xl font-bold tracking-tight text-[#0d1b35]">
+              India<span className="text-primary">ICU</span>
+            </span>
           </Link>
         </div>
 
@@ -45,7 +47,7 @@ export function Navbar() {
           </div>
           <a
             href={PHONE_TEL}
-            onClick={() => trackPhoneCall("navbar-phone-display")}
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackPhoneCall(e, PHONE_TEL, "navbar-phone-display")}
             className="hidden lg:flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
             data-testid="link-nav-phone"
           >
@@ -54,7 +56,7 @@ export function Navbar() {
           </a>
           <a
             href={PHONE_TEL}
-            onClick={() => trackPhoneCall("navbar-call-now")}
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackPhoneCall(e, PHONE_TEL, "navbar-call-now")}
             className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow transition-colors hover:bg-primary/90"
             data-testid="button-call-now-nav"
           >
@@ -67,7 +69,7 @@ export function Navbar() {
         <div className="md:hidden flex items-center gap-3">
           <a
             href={PHONE_TEL}
-            onClick={() => trackPhoneCall("navbar-mobile-header")}
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackPhoneCall(e, PHONE_TEL, "navbar-mobile-header")}
             className="text-sm font-bold text-primary"
             data-testid="link-mobile-phone-header"
           >
@@ -83,7 +85,7 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav Drawer */}
       {isOpen && (
         <div className="md:hidden border-t border-border bg-white p-4 absolute top-16 left-0 right-0 shadow-lg z-50">
           <div className="flex flex-col space-y-4">
@@ -100,7 +102,10 @@ export function Navbar() {
             ))}
             <a
               href={PHONE_TEL}
-              onClick={() => { setIsOpen(false); trackPhoneCall("navbar-mobile-menu"); }}
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                setIsOpen(false);
+                trackPhoneCall(e, PHONE_TEL, "navbar-mobile-menu");
+              }}
               className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-4 py-2 text-base font-bold text-white shadow w-full"
               data-testid="button-mobile-call-now"
             >
@@ -111,7 +116,10 @@ export function Navbar() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              onClick={() => { setIsOpen(false); trackWhatsApp("navbar-mobile-menu"); }}
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                setIsOpen(false);
+                trackWhatsApp(e, WHATSAPP_URL, "navbar-mobile-menu");
+              }}
               className="inline-flex h-12 items-center justify-center rounded-md bg-[#25D366] px-4 py-2 text-base font-bold text-white shadow w-full"
               data-testid="button-mobile-whatsapp"
             >
