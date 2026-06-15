@@ -1,3 +1,4 @@
+import React from "react";
 import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useForm } from "react-hook-form";
@@ -17,6 +18,7 @@ import { trackPhoneCall, trackWhatsApp, trackFormSubmit } from "@/lib/analytics"
 
 const PHONE_NUMBER = "8901434774";
 const PHONE_DISPLAY = "89014 34774";
+const WHATSAPP_URL = "https://wa.me/918901434261";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -47,9 +49,10 @@ export function ContactSection() {
       .filter(Boolean)
       .join("\n");
 
+    // Form submits don't need the event wrapper since they are JS-controlled
     trackFormSubmit();
 
-    const url = `https://wa.me/918901434261?text=${encodeURIComponent(msg)}`;
+    const url = `${WHATSAPP_URL}?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank", "noreferrer");
     form.reset();
   }
@@ -70,7 +73,7 @@ export function ContactSection() {
               
               <a
                 href={`tel:+91${PHONE_NUMBER}`}
-                onClick={() => trackPhoneCall("contact-section")}
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackPhoneCall(e, `tel:+91${PHONE_NUMBER}`, "contact-section")}
                 className="group flex flex-col p-6 rounded-xl bg-white/5 border border-primary/20 hover:border-primary/50 transition-colors mb-6"
                 data-testid="contact-call-card"
               >
@@ -83,10 +86,10 @@ export function ContactSection() {
               </a>
 
               <a
-href={"https://wa.me/918901434261"}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => trackWhatsApp("contact-section")}
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackWhatsApp(e, WHATSAPP_URL, "contact-section")}
                 className="group flex flex-col p-6 rounded-xl bg-white/5 border border-[#25D366]/20 hover:border-[#25D366]/50 transition-colors"
                 data-testid="contact-whatsapp-card"
               >
