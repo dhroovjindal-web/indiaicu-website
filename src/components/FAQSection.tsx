@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const PHONE_DISPLAY = "89014 34774";
+const PHONE_DISPLAY = "83077 44774";
 
 export function FAQSection() {
   const faqs = [

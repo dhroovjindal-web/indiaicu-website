@@ -2,7 +2,7 @@ import { PageLayout } from "@/components/PageLayout";
 import { ShieldCheck, Network, MapPin, UserCheck, Phone } from "lucide-react";
 
 const PHONE_TEL = "tel:+918307744774";
-const PHONE_DISPLAY = "89014 34774";
+const PHONE_DISPLAY = "83077 44774";
 
 export default function About() {
   return (

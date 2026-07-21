@@ -2,7 +2,7 @@ import { PageLayout } from "@/components/PageLayout";
 
 const LAST_UPDATED = "11 June 2026";
 const PHONE_TEL = "tel:+918307744774";
-const PHONE_DISPLAY = "89014 34774";
+const PHONE_DISPLAY = "83077 44774";
 
 export default function Privacy() {
   return (

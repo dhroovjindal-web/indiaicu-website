@@ -2,7 +2,7 @@ import { PageLayout } from "@/components/PageLayout";
 import { Phone, Info, AlertCircle } from "lucide-react";
 
 const PHONE_TEL = "tel:+918307744774";
-const PHONE_DISPLAY = "89014 34774";
+const PHONE_DISPLAY = "83077 44774";
 
 export default function Pricing() {
   return (
