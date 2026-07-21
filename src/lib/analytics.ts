@@ -10,9 +10,9 @@ export const GOOGLE_ADS_ID = "AW-18212173511";
 
 const CONVERSION_LABELS = {
   /** Primary conversion — phone calls are the highest-value lead action */
-  phoneCall: "_xvjCKaBw78cEMftnuxD", 
-  whatsApp: "REPLACE_WITH_WA_LABEL", // ← Replace this when you generate a WhatsApp label
-  formSubmit: "REPLACE_WITH_FORM_LABEL", 
+  phoneCall: "hJobCLuJp9QcEMftnuxD",
+  whatsApp: "j32WCL6Jp9QcEMftnuxD",
+  formSubmit: "vFErCMGJp9QcEMftnuxD",
 } as const;
 
 // ─── Safe gtag wrapper ────────────────────────────────────────────────────────
