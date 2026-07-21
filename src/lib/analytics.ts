@@ -35,7 +35,7 @@ function gtag(...args: unknown[]): void {
 /**
  * Track a phone CTA click.
  * @param e - The React MouseEvent passed from the link click
- * @param url - The dialer destination string (e.g., 'tel:+918901434774')
+ * @param url - The dialer destination string (e.g., 'tel:+918307744774')
  * @param location - Where on the page the click happened — e.g. "hero", "navbar", "sticky-bar"
  */
 export function trackPhoneCall(

@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 
-const PHONE_NUMBER = "8901434774";
+const PHONE_NUMBER = "8307744774";
 const PHONE_DISPLAY = "89014 34774";
 
 export function StickyMobileCTA() {

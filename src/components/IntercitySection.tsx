@@ -31,7 +31,7 @@ export function IntercitySection() {
               PAN India — Any City to Any City
             </div>
             <div className="pt-2">
-              <a href="tel:+918901434774" className="text-primary hover:text-foreground font-semibold flex items-center gap-2 transition-colors text-lg" data-testid="link-intercity-call">
+              <a href="tel:+918307744774" className="text-primary hover:text-foreground font-semibold flex items-center gap-2 transition-colors text-lg" data-testid="link-intercity-call">
                 Consult Dispatch Team <ArrowRight className="h-5 w-5" />
               </a>
             </div>
