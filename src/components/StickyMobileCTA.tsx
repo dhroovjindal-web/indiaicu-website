@@ -30,7 +30,7 @@ export function StickyMobileCTA() {
       >
         <FaWhatsapp className="h-5 w-5" />
         <span className="text-xs font-bold">WhatsApp</span>
-        <span className="text-[10px] font-medium opacity-90">89014 34261</span>
+        <span className="text-[10px] font-medium opacity-90">83077 44774</span>
       </a>
     </div>
   );

@@ -97,7 +97,7 @@ export function ContactSection() {
                   <FaWhatsapp className="h-4 w-4" /> WhatsApp Support
                 </span>
                 <span className="text-2xl font-bold text-white group-hover:text-[#25D366] transition-colors">
-                  WhatsApp: 89014 34261
+                  WhatsApp: 83077 44774
                 </span>
               </a>
             </div>

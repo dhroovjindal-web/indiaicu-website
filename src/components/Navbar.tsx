@@ -123,7 +123,7 @@ export function Navbar() {
               className="inline-flex h-12 items-center justify-center rounded-md bg-[#25D366] px-4 py-2 text-base font-bold text-white shadow w-full"
               data-testid="button-mobile-whatsapp"
             >
-              WhatsApp: 89014 34261
+              WhatsApp: 83077 44774
             </a>
           </div>
         </div>
