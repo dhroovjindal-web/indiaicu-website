@@ -53,7 +53,7 @@ export function HeroSection() {
               Call Dispatch: {PHONE_DISPLAY}
             </a>
             <a
-              href={`https://wa.me/918901434261`}
+              href={`https://wa.me/918307744774`}
               target="_blank"
               rel="noreferrer"
               onClick={() => trackWhatsApp("hero")}

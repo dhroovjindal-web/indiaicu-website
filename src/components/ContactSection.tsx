@@ -18,7 +18,7 @@ import { trackPhoneCall, trackWhatsApp, trackFormSubmit } from "@/lib/analytics"
 
 const PHONE_NUMBER = "8901434774";
 const PHONE_DISPLAY = "89014 34774";
-const WHATSAPP_URL = "https://wa.me/918901434261";
+const WHATSAPP_URL = "https://wa.me/918307744774";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),

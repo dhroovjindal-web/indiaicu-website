@@ -21,10 +21,10 @@ export function StickyMobileCTA() {
       </a>
       <div className="w-px bg-white/20" />
       <a 
-        href={"https://wa.me/918901434261"}
+        href={"https://wa.me/918307744774"}
         target="_blank"
         rel="noreferrer"
-        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackWhatsApp(e, "https://wa.me/918901434261", "sticky-bar")}
+        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackWhatsApp(e, "https://wa.me/918307744774", "sticky-bar")}
         className="flex-1 flex flex-col items-center justify-center gap-0.5 bg-[#25D366] text-white font-bold active:brightness-90 transition-all"
         data-testid="mobile-cta-whatsapp"
       >

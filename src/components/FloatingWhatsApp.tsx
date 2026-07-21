@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { trackWhatsApp } from "@/lib/analytics";
 
 export function FloatingWhatsApp() {
-  const WHATSAPP_URL = "https://wa.me/918901434261";
+  const WHATSAPP_URL = "https://wa.me/918307744774";
 
   return (
     <a
