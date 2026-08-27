@@ -30,8 +30,10 @@ export const HeroCallbackForm: React.FC = () => {
     setLoading(true);
 
     try {
-await fetch("https://script.google.com/macros/s/AKfycbwGDkn0Grp1NZeGXbZpsEc_0Mwi_L37opEFimVK8nIwvhAYVDi17YAEUYAP6xc55WuUkg/exec", {        method: "POST",
-        headers: { "Content-Type": "application/json" },
+await fetch("https://script.google.com/macros/s/AKfycbwGDkn0Grp1NZeGXbZpsEc_0Mwi_L37opEFimVK8nIwvhAYVDi17YAEUYAP6xc55WuUkg/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify({
           name: name.trim() || "Emergency Inquirer",
           phone: cleanPhone,
