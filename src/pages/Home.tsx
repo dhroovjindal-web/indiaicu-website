@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const ServicesSection = lazy(() => import("@/components/ServicesSection").then(m => ({ default: m.ServicesSection })));
 const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
@@ -53,7 +52,6 @@ export default function Home() {
         <Footer />
       </Suspense>
       <StickyMobileCTA />
-      <FloatingWhatsApp />
     </div>
   );
 }
