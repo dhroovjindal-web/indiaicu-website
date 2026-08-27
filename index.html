@@ -10,6 +10,22 @@
 
   gtag('config', 'G-YHQWFDJ9NV');
 </script>
+    <!-- GCLID URL Capture & Cookie Storage -->
+<script>
+  (function() {
+    function getParam(p) {
+      var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+    var gclid = getParam('gclid');
+    if (gclid) {
+      var d = new Date();
+      d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30-day cookie
+      document.cookie = "gclid=" + gclid + "; expires=" + d.toGMTString() + "; path=/";
+      localStorage.setItem('gclid', gclid);
+    }
+  })();
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     <link rel="icon" href="/favicon.png?v=3" /> 
