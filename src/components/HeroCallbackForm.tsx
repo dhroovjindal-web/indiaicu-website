@@ -36,17 +36,30 @@ export const HeroCallbackForm: React.FC = () => {
     setLoading(true);
 
     try {
-await fetch("https://script.google.com/macros/s/AKfycbxeZgRDlL4rmFSO6Zd2xjfvU_-75lrvrekffANG8dBRsWfjBaLUuDq6XiBSggXvSH91Jw/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify({
-          name: name.trim() || "Emergency Inquirer",
-          phone: cleanPhone,
-          gclid: new URLSearchParams(window.location.search).get("gclid") || gclid || "Direct / None",
-          timestamp: new Date().toISOString(),
-        }),
-      });
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxeZgRDlL4rmFSO6Zd2xjfvU_-75lrvrekffANG8dBRsWfjBaLUuDq6XiBSggXvSH91Jw/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            name: name.trim() || "Emergency Inquirer",
+            phone: cleanPhone,
+            gclid:
+              new URLSearchParams(window.location.search).get("gclid") ||
+              gclid ||
+              "Direct / None",
+            timestamp: new Date().toISOString(),
+          }),
+        }
+      );
+
+      // Trigger Google Ads Conversion Event
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "conversion", {
+          send_to: "AW-18212173511/cZhiCMu4jekcEMftnuxD",
+        });
+      }
 
       setSubmitted(true);
     } catch (err) {
@@ -63,9 +76,12 @@ await fetch("https://script.google.com/macros/s/AKfycbxeZgRDlL4rmFSO6Zd2xjfvU_-7
         <div className="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl font-bold">
           ✓
         </div>
-        <h3 className="text-emerald-400 font-bold text-lg mb-1">Alerting Dispatcher</h3>
+        <h3 className="text-emerald-400 font-bold text-lg mb-1">
+          Alerting Dispatcher
+        </h3>
         <p className="text-slate-200 text-sm">
-          A critical care coordinator is calling <strong>{phone}</strong> in under 30 seconds.
+          A critical care coordinator is calling <strong>{phone}</strong> in
+          under 30 seconds.
         </p>
       </div>
     );
@@ -77,7 +93,9 @@ await fetch("https://script.google.com/macros/s/AKfycbxeZgRDlL4rmFSO6Zd2xjfvU_-7
         <span className="text-[10px] font-bold tracking-wider uppercase bg-red-500/20 text-red-400 px-2.5 py-0.5 rounded-full border border-red-500/30">
           ● Priority Dispatch
         </span>
-        <span className="text-[11px] text-slate-400 font-medium">Callback in &lt; 30s</span>
+        <span className="text-[11px] text-slate-400 font-medium">
+          Callback in &lt; 30s
+        </span>
       </div>
 
       <h3 className="text-lg font-bold text-white mb-0.5">
