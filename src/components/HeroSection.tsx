@@ -1,3 +1,4 @@
+import { HeroCallbackForm } from "./HeroCallbackForm";
 import { Phone, Clock, MapPin, ShieldCheck, Network } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
@@ -23,47 +24,57 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b35] via-[#0d1b35]/90 to-transparent" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4">
-        <div className="max-w-3xl space-y-7">
-          {/* Aggregator badge — explicit identity */}
-          <div className="inline-flex items-center rounded-full border border-blue-400/40 bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-300 backdrop-blur-sm">
-            <Network className="mr-2 h-4 w-4" />
-            Ambulance Aggregator &amp; Dispatch Network
+    <div className="container relative z-10 mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 py-4">
+          
+          {/* Left Column: Hero Text & Action Buttons */}
+          <div className="max-w-2xl space-y-7 flex-1">
+            {/* Aggregator badge — explicit identity */}
+            <div className="inline-flex items-center rounded-full border border-blue-400/40 bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-300 backdrop-blur-sm">
+              <Network className="mr-2 h-4 w-4" />
+              Ambulance Aggregator &amp; Dispatch Network
+            </div>
+
+            <h1 className="font-heading text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.1]">
+              India's 24/7 Emergency{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
+                Ambulance Service
+              </span>{" "}
+            </h1>
+
+            <p className="text-xl text-blue-100/80 font-medium max-w-2xl leading-relaxed">
+              Book verified ICU, oxygen, and cardiac ambulances instantly. Available 24/7 for immediate dispatch across India.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <a
+                href={`tel:+91${PHONE_NUMBER}`}
+                onClick={() => trackPhoneCall("hero")}
+                className="inline-flex h-14 items-center justify-center rounded-md bg-primary px-8 text-lg font-bold text-primary-foreground shadow-lg transition-all"
+                data-testid="button-hero-call"
+              >
+                <Phone className="mr-3 h-5 w-5" />
+                Call Dispatch: {PHONE_DISPLAY}
+              </a>
+              <a
+                href={`https://wa.me/918307744774`}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackWhatsApp("hero")}
+                className="inline-flex h-14 items-center justify-center rounded-md bg-[#25D366] px-8 text-lg font-bold text-white shadow-lg transition-all hover:bg-[#20bd5a]"
+                data-testid="button-hero-whatsapp"
+              >
+                <FaWhatsapp className="mr-3 h-6 w-6" />
+                WhatsApp Us
+              </a>
+            </div>
           </div>
 
-          <h1 className="font-heading text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.1]">
-            India's 24/7 Emergency{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
-              Ambulance Service
-            </span>{" "}
-          </h1>
-
-          <p className="text-xl text-blue-100/80 font-medium max-w-2xl leading-relaxed">
-            Book verified ICU, oxygen, and cardiac ambulances instantly. Available 24/7 for immediate dispatch across India.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
-            <a
-              href={`tel:+91${PHONE_NUMBER}`}
-              onClick={() => trackPhoneCall("hero")}
-              className="inline-flex h-14 items-center justify-center rounded-md bg-primary px-8 text-lg font-bold text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
-              data-testid="button-hero-call"
-            >
-              <Phone className="mr-3 h-5 w-5" />
-              Call Dispatch: {PHONE_DISPLAY}
-            </a>
-            <a
-              href={`https://wa.me/918307744774`}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => trackWhatsApp("hero")}
-              className="inline-flex h-14 items-center justify-center rounded-md bg-[#25D366] px-8 text-lg font-bold text-white shadow-lg transition-all hover:bg-[#20bd5a] hover:scale-105 active:scale-95"
-              data-testid="button-hero-whatsapp"
-            >
-              <FaWhatsapp className="mr-3 h-6 w-6" />
-              WhatsApp Us
-            </a>
+          {/* Right Column: Instant Callback Form */}
+          <div className="w-full lg:w-auto flex justify-center flex-shrink-0">
+            <HeroCallbackForm />
           </div>
+
         </div>
       </div>
 
