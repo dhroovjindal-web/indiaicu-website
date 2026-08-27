@@ -8,14 +8,20 @@ export const HeroCallbackForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    // Read GCLID from LocalStorage or Cookie
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlGclid = urlParams.get("gclid");
     const storedGclid =
+      urlGclid ||
       localStorage.getItem("gclid") ||
       document.cookie
         .split("; ")
         .find((row) => row.startsWith("gclid="))
         ?.split("=")[1] ||
       "";
+
+    if (urlGclid) {
+      localStorage.setItem("gclid", urlGclid);
+    }
     setGclid(storedGclid);
   }, []);
 
