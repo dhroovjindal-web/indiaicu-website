@@ -43,7 +43,7 @@ await fetch("https://script.google.com/macros/s/AKfycbwGDkn0Grp1NZeGXbZpsEc_0Mwi
         body: JSON.stringify({
           name: name.trim() || "Emergency Inquirer",
           phone: cleanPhone,
-          gclid: gclid,
+          gclid: new URLSearchParams(window.location.search).get("gclid") || gclid || "Direct / None",
           timestamp: new Date().toISOString(),
         }),
       });
