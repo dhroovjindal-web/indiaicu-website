@@ -1,56 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YHQWFDJ9NV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) — GA4 & Google Ads Unified -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHQWFDJ9NV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-YHQWFDJ9NV');
-</script>
-    <!-- GCLID URL Capture & Cookie Storage -->
-<script>
-  (function() {
-    function getParam(p) {
-      var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
-      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-    }
-    var gclid = getParam('gclid');
-    if (gclid) {
-      var d = new Date();
-      d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30-day cookie
-      document.cookie = "gclid=" + gclid + "; expires=" + d.toGMTString() + "; path=/";
-      localStorage.setItem('gclid', gclid);
-    }
-  })();
-</script>
+      // Google Analytics 4
+      gtag('config', 'G-YHQWFDJ9NV');
+      
+      // Google Ads
+      gtag('config', 'AW-18212173511');
+    </script>
+
+    <!-- GCLID URL Capture & Storage -->
+    <script>
+      (function() {
+        function getParam(p) {
+          var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+          return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+        var gclid = getParam('gclid');
+        if (gclid) {
+          var d = new Date();
+          d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30-day cookie
+          document.cookie = "gclid=" + gclid + "; expires=" + d.toGMTString() + "; path=/";
+          localStorage.setItem('gclid', gclid);
+        }
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     <link rel="icon" href="/favicon.png?v=3" /> 
-    <meta property="og:title" content="IndiaICU Ambulance Service | 24/7 ICU Ambulance Across India" />
-<meta property="og:description" content="IndiaICU provides 24/7 ICU ambulance, ventilator ambulance, oxygen ambulance, intercity patient transfer, and dead body freezer box services across Delhi NCR and PAN India." />
-<meta property="og:image" content="https://www.indiaicu.com/og-image.png?v=2" />
-<meta property="og:url" content="https://www.indiaicu.com/" />
-<meta property="og:type" content="website" />
-    <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="IndiaICU Ambulance Service | 24/7 ICU Ambulance Across India" />
-<meta name="twitter:description" content="IndiaICU provides 24/7 ICU ambulance, ventilator ambulance, oxygen ambulance, intercity patient transfer, and dead body freezer box services across Delhi NCR and PAN India." />
-<meta name="twitter:image" content="https://www.indiaicu.com/og-image.png?v=2" />
 
     <!-- ═══════════════════════════════════════════════
          PRIMARY SEO META TAGS
     ═══════════════════════════════════════════════ -->
-<title>IndiaICU Ambulance Service | 24/7 ICU Ambulance Across India</title>
-<meta name="description" content="IndiaICU provides 24/7 emergency ICU ambulance services across India. Staffed by trained paramedics and equipped with advanced life-support systems." />
+    <title>IndiaICU Ambulance Service | 24/7 ICU Ambulance Across India</title>
+    <meta name="description" content="IndiaICU provides 24/7 emergency ICU ambulance services across India. Staffed by trained paramedics and equipped with advanced life-support systems." />
     <meta name="keywords" content="ICU ambulance Delhi NCR, emergency ambulance Delhi, ambulance service Delhi 24/7, ventilator ambulance Delhi, intercity ambulance India, oxygen ambulance Noida, ambulance Gurgaon, dead body freezer box" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="IndiaICU" />
-<link rel="canonical" href="https://indiaicu.com/" />
+    <link rel="canonical" href="https://indiaicu.com/" />
     
     <!-- ═══════════════════════════════════════════════
          LOCAL GEO SIGNALS (Delhi NCR)
@@ -68,7 +62,7 @@
     <meta property="og:url" content="https://www.indiaicu.com/" />
     <meta property="og:title" content="IndiaICU Ambulance Service | 24/7 ICU Ambulance Across India" />
     <meta property="og:description" content="IndiaICU provides 24/7 emergency ICU ambulance services across India. Staffed by trained paramedics and equipped with advanced life-support systems." />
-    <meta property="og:image" content="https://www.indiaicu.com/opengraph.jpg" />
+    <meta property="og:image" content="https://www.indiaicu.com/og-image.png?v=2" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="IndiaICU Emergency ICU Ambulance Service" />
@@ -81,17 +75,16 @@
     <meta name="twitter:site" content="@indiaicu" />
     <meta name="twitter:title" content="IndiaICU Ambulance Service | 24/7 ICU Ambulance Across India" />
     <meta name="twitter:description" content="24/7 ICU ambulance across Delhi NCR & PAN India. Ventilator, oxygen, intercity transfers. Call 83077 44774." />
-    <meta name="twitter:image" content="https://www.indiaicu.com/opengraph.jpg" />
+    <meta name="twitter:image" content="https://www.indiaicu.com/og-image.png?v=2" />
     <meta name="twitter:image:alt" content="IndiaICU Emergency Ambulance Service" />
 
     <!-- ═══════════════════════════════════════════════
-         FAST INDEXING SIGNALS
+         FAST INDEXING SIGNALS & FONTS
     ═══════════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://wa.me" />
 
-    <!-- Fonts — async, non-blocking -->
     <link
       rel="preload"
       as="style"
@@ -102,34 +95,11 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" />
     </noscript>
 
-    <!-- Preload LCP image (hero) — critical for Core Web Vitals -->
     <link rel="preload" as="image" href="/hero-ambulance.webp" fetchpriority="high" />
-
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <!-- ═══════════════════════════════════════════════
-         GOOGLE ANALYTICS 4 + GOOGLE ADS
-         Replace G-XXXXXXXXXX with your GA4 Measurement ID
-         Replace AW-XXXXXXXXX with your Google Ads account ID
-         Script is async — zero render-blocking impact
-    ═══════════════════════════════════════════════ -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      // GA4 config
-      gtag('config', 'G-XXXXXXXXXX', {
-        send_page_view: true,
-        page_title: document.title,
-        page_location: window.location.href
-      });
-      // Google Ads config — enables auto-conversion tracking linker
-      gtag('config', 'AW-XXXXXXXXX');
-    </script>
-
-    <!-- ═══════════════════════════════════════════════
-         JSON-LD STRUCTURED DATA — LocalBusiness / EmergencyService
+         JSON-LD STRUCTURED DATA
     ═══════════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
@@ -241,7 +211,7 @@
     </script>
 
     <!-- ═══════════════════════════════════════════════
-         JSON-LD — FAQPage (boosts Google rich results)
+         JSON-LD — FAQPage
     ═══════════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
@@ -309,7 +279,7 @@
     </script>
 
     <!-- ═══════════════════════════════════════════════
-         JSON-LD — BreadcrumbList (single-page, signals structure to Google)
+         JSON-LD — BreadcrumbList & Organization
     ═══════════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
@@ -326,14 +296,14 @@
     }
     </script>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "IndiaICU Ambulance Service",
-  "url": "https://www.indiaicu.com/",
-  "logo": "https://www.indiaicu.com/favicon.png"
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IndiaICU Ambulance Service",
+      "url": "https://www.indiaicu.com/",
+      "logo": "https://www.indiaicu.com/favicon.png"
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
