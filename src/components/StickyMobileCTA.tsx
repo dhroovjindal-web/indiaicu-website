@@ -4,33 +4,34 @@ import { FaWhatsapp } from "react-icons/fa";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 
 const PHONE_NUMBER = "8307744774";
-const PHONE_DISPLAY = "83077 44774";
 
 export function StickyMobileCTA() {
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex h-16 shadow-[0_-4px_24px_rgba(0,0,0,0.6)] border-t border-white/10">
-      <a 
-        href={`tel:+91${PHONE_NUMBER}`}
-        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackPhoneCall(e, `tel:+91${PHONE_NUMBER}`, "sticky-bar")}
-        className="flex-1 flex flex-col items-center justify-center gap-0.5 bg-primary text-primary-foreground font-bold active:brightness-90 transition-all"
-        data-testid="mobile-cta-call"
-      >
-        <Phone className="h-5 w-5" />
-        <span className="text-xs font-bold">Call Now</span>
-        <span className="text-[10px] font-medium opacity-90">{PHONE_DISPLAY}</span>
-      </a>
-      <div className="w-px bg-white/20" />
-      <a 
-        href={"https://wa.me/918307744774"}
+    <div className="fixed bottom-5 right-4 z-50 flex flex-col gap-3 items-end md:hidden">
+      {/* WhatsApp Circular Floating Button */}
+      <a
+        href={`https://wa.me/91${PHONE_NUMBER}`}
         target="_blank"
         rel="noreferrer"
-        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackWhatsApp(e, "https://wa.me/918307744774", "sticky-bar")}
-        className="flex-1 flex flex-col items-center justify-center gap-0.5 bg-[#25D366] text-white font-bold active:brightness-90 transition-all"
-        data-testid="mobile-cta-whatsapp"
+        onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
+          trackWhatsApp(e, `https://wa.me/91${PHONE_NUMBER}`, "floating_btn")
+        }
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-green-950/40 transition hover:scale-110 active:scale-95 border-2 border-white/20"
+        aria-label="WhatsApp Us"
       >
-        <FaWhatsapp className="h-5 w-5" />
-        <span className="text-xs font-bold">WhatsApp</span>
-        <span className="text-[10px] font-medium opacity-90">83077 44774</span>
+        <FaWhatsapp className="h-6 w-6" />
+      </a>
+
+      {/* Direct Call Circular Floating Button */}
+      <a
+        href={`tel:+91${PHONE_NUMBER}`}
+        onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
+          trackPhoneCall(e, `tel:+91${PHONE_NUMBER}`, "floating_btn")
+        }
+        className="relative flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xl shadow-red-950/50 transition hover:scale-110 active:scale-95 border-2 border-white/20"
+        aria-label="Call Dispatch"
+      >
+        <Phone className="h-6 w-6 animate-pulse" />
       </a>
     </div>
   );
