@@ -30,8 +30,7 @@ export const HeroCallbackForm: React.FC = () => {
     setLoading(true);
 
     try {
-      await fetch("https://api.indiaicu.com/api/callback", {
-        method: "POST",
+await fetch("https://script.google.com/macros/s/AKfycbwGDkn0Grp1NZeGXbZpsEc_0Mwi_L37opEFimVK8nIwvhAYVDi17YAEUYAP6xc55WuUkg/exec", {        method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: name.trim() || "Emergency Inquirer",
