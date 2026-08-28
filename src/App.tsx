@@ -8,6 +8,7 @@ import About from "@/pages/About";
 import Pricing from "@/pages/Pricing";
 import Terms from "@/pages/Terms";
 import Privacy from "@/pages/Privacy";
+import Mumbai from "@/pages/Mumbai"; // Added Mumbai Page
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/mumbai" component={Mumbai} /> {/* Added Mumbai Route */}
       <Route path="/about" component={About} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/terms" component={Terms} />
