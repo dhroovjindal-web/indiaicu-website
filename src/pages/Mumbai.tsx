@@ -1,14 +1,16 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { HeroCallbackForm } from "@/components/HeroCallbackForm";
 import { Clock, MapPin, ShieldCheck, Network } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
-import { ServicesSection } from "@/components/ServicesSection";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { HowItWorks } from "@/components/HowItWorks";
-import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
-import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+
+// Lazy-load sections below the fold
+const ServicesSection = lazy(() => import("@/components/ServicesSection").then(m => ({ default: m.ServicesSection })));
+const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
+const HowItWorks = lazy(() => import("@/components/HowItWorks").then(m => ({ default: m.HowItWorks })));
+const ContactSection = lazy(() => import("@/components/ContactSection").then(m => ({ default: m.ContactSection })));
+const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
+const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
+const StickyMobileCTA = lazy(() => import("@/components/StickyMobileCTA").then(m => ({ default: m.StickyMobileCTA })));
 
 export default function Mumbai() {
   return (
@@ -16,8 +18,8 @@ export default function Mumbai() {
       <Navbar />
       
       <main className="flex-grow">
+        {/* Critical Hero Section (Loads Instantly) */}
         <section className="relative min-h-[75vh] flex items-center pt-12 pb-32 sm:pt-16 sm:pb-34 overflow-hidden bg-[#0d1b35]">
-          {/* Background Image & Overlay */}
           <div className="absolute inset-0 z-0">
             <img
               src="/hero-ambulance.webp"
@@ -35,7 +37,6 @@ export default function Mumbai() {
           <div className="container relative z-10 mx-auto px-4 py-2">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
               
-              {/* Left Column: Targeted Mumbai Headlines */}
               <div className="max-w-2xl space-y-3 sm:space-y-4 lg:space-y-6 flex-1 text-center lg:text-left">
                 <div className="inline-flex items-center rounded-full border border-blue-400/40 bg-blue-500/10 px-3.5 py-1 text-xs sm:text-sm font-semibold text-blue-300 backdrop-blur-sm">
                   <MapPin className="mr-2 h-3.5 w-3.5" />
@@ -54,7 +55,6 @@ export default function Mumbai() {
                 </p>
               </div>
 
-              {/* Right Column: Callback Form */}
               <div className="w-full lg:w-auto flex justify-center flex-shrink-0 mt-2 lg:mt-0">
                 <HeroCallbackForm />
               </div>
@@ -62,7 +62,6 @@ export default function Mumbai() {
             </div>
           </div>
 
-          {/* Localized Trust Points */}
           <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-[#0d1b35]/95 backdrop-blur-md">
             <div className="container mx-auto px-4 py-4 sm:py-5">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-xs sm:text-sm font-semibold">
@@ -87,16 +86,20 @@ export default function Mumbai() {
           </div>
         </section>
 
-        {/* Supporting Information Sections */}
-        <ServicesSection />
-        <WhyChooseUs />
-        <HowItWorks />
-        <ContactSection />
+        {/* Deferred Secondary Sections */}
+        <Suspense fallback={<div className="py-12 bg-[#050b14]" />}>
+          <ServicesSection />
+          <WhyChooseUs />
+          <HowItWorks />
+          <ContactSection />
+        </Suspense>
       </main>
 
-      <Footer />
-      <FloatingWhatsApp />
-      <StickyMobileCTA />
+      <Suspense fallback={null}>
+        <Footer />
+        <FloatingWhatsApp />
+        <StickyMobileCTA />
+      </Suspense>
     </div>
   );
 }
