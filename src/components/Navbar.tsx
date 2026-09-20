@@ -6,7 +6,7 @@ import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 const PHONE_NUMBER = "8307744774";
 const PHONE_DISPLAY = "83077 44774";
 const PHONE_TEL = `tel:+91${PHONE_NUMBER}`;
-const WHATSAPP_URL = `https://wa.me/918307744774`;
+const WHATSAPP_URL = `https://wa.me/918307744774?text=Emergency%20Ambulance%20Required`;
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +57,7 @@ export function Navbar() {
           <a
             href={PHONE_TEL}
             onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackPhoneCall(e, PHONE_TEL, "navbar-call-now")}
-            className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow transition-colors hover:bg-primary/90"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-red-600 px-4 py-2 text-sm font-bold text-white shadow hover:bg-red-700 transition-colors"
             data-testid="button-call-now-nav"
           >
             <Phone className="mr-2 h-4 w-4" />
@@ -65,18 +65,19 @@ export function Navbar() {
           </a>
         </div>
 
-        {/* Mobile: show number + hamburger */}
-        <div className="md:hidden flex items-center gap-3">
+        {/* Mobile: Prominent Red Call Badge + Hamburger */}
+        <div className="md:hidden flex items-center gap-2">
           <a
             href={PHONE_TEL}
             onClick={(e: React.MouseEvent<HTMLAnchorElement>) => trackPhoneCall(e, PHONE_TEL, "navbar-mobile-header")}
-            className="text-sm font-bold text-primary"
+            className="inline-flex items-center gap-1.5 bg-red-600 active:bg-red-700 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm"
             data-testid="link-mobile-phone-header"
           >
-            {PHONE_DISPLAY}
+            <Phone className="h-3.5 w-3.5" />
+            <span>Call: {PHONE_DISPLAY}</span>
           </a>
           <button
-            className="text-foreground"
+            className="text-foreground p-1"
             onClick={() => setIsOpen(!isOpen)}
             data-testid="button-mobile-menu"
           >
@@ -106,7 +107,7 @@ export function Navbar() {
                 setIsOpen(false);
                 trackPhoneCall(e, PHONE_TEL, "navbar-mobile-menu");
               }}
-              className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-4 py-2 text-base font-bold text-white shadow w-full"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-red-600 px-4 py-2 text-base font-bold text-white shadow w-full"
               data-testid="button-mobile-call-now"
             >
               <Phone className="mr-2 h-5 w-5" />

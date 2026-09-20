@@ -16,8 +16,14 @@ export function PageLayout({ children }: PageLayoutProps) {
         {children}
       </main>
       <Footer />
+      
+      {/* Docked bottom bar on mobile */}
       <StickyMobileCTA />
-      <FloatingWhatsApp />
+
+      {/* Floating WhatsApp button visible on desktop only */}
+      <div className="hidden md:block">
+        <FloatingWhatsApp />
+      </div>
     </div>
   );
 }
