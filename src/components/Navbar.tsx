@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 
 const PHONE_NUMBER = "8307744774";
@@ -10,14 +10,16 @@ const WHATSAPP_URL = `https://wa.me/918307744774?text=Emergency%20Ambulance%20Re
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
+  const isMumbai = location === "/mumbai";
 
   const navLinks = [
-    { name: "Services", href: "/#services" },
+    { name: "Services", href: isMumbai ? "#services" : "/#services" },
     { name: "About", href: "/about" },
     { name: "Cities", href: "/#cities" },
     { name: "Pricing", href: "/pricing" },
-    { name: "FAQ", href: "/#faq" },
-    { name: "Contact", href: "/#contact" },
+    { name: "FAQ", href: isMumbai ? "#faq" : "/#faq" },
+    { name: "Contact", href: isMumbai ? "#contact" : "/#contact" },
   ];
 
   return (
