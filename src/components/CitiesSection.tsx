@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export function CitiesSection() {
   const cities = [
     "Mumbai", "Bengaluru", "Hyderabad", "Chennai", 
@@ -21,16 +23,29 @@ export function CitiesSection() {
             <span className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#0d1b35] to-blue-400 tracking-tighter">
               DELHI NCR
             </span>
-            <p className="text-muted-foreground mt-2 font-medium">Headquarters & Primary Hub</p>
+            <p className="text-muted-foreground mt-2 font-medium">Headquarters &amp; Primary Hub</p>
           </div>
 
           {/* Other Cities Grid */}
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
-            {cities.map((city, i) => (
-              <span key={i} className="text-lg md:text-xl font-semibold text-muted-foreground hover:text-foreground transition-colors cursor-default">
-                {city}
-              </span>
-            ))}
+            {cities.map((city, i) =>
+              city === "Mumbai" ? (
+                <Link
+                  key={i}
+                  href="/mumbai"
+                  className="text-lg md:text-xl font-bold text-[#0d1b35] hover:text-primary underline decoration-primary/40 hover:decoration-primary underline-offset-4 transition-colors cursor-pointer"
+                >
+                  {city} ↗
+                </Link>
+              ) : (
+                <span
+                  key={i}
+                  className="text-lg md:text-xl font-semibold text-muted-foreground hover:text-foreground transition-colors cursor-default"
+                >
+                  {city}
+                </span>
+              )
+            )}
           </div>
         </div>
       </div>
