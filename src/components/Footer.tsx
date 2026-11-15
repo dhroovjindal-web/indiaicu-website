@@ -134,6 +134,7 @@ export function Footer() {
                 { label: "About Us", href: "/about" },
                 { label: "Pricing Policy", href: "/pricing" },
                 { label: "Cities We Serve", href: "/#cities" },
+                { label: "Mumbai ICU Ambulance", href: "/mumbai" },
                 { label: "How It Works", href: isMumbai ? "#how-it-works" : "/#how-it-works" },
                 { label: "FAQ", href: isMumbai ? "#faq" : "/#faq" },
                 { label: "Contact / Book", href: isMumbai ? "#contact" : "/#contact" },
