@@ -1,5 +1,6 @@
 import { Phone, MapPin, Mail, Clock } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { useLocation } from "wouter";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 
 const PHONE_NUMBER = "8307744774";
@@ -10,6 +11,9 @@ const SUPPORT_EMAIL = "connect.indiaicu@gmail.com";
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
+  const [location] = useLocation();
+  const isMumbai = location === "/mumbai";
+
   return (
     <footer className="bg-[#050b14] border-t border-white/10">
       {/* Emergency CTA strip */}
@@ -108,7 +112,7 @@ export function Footer() {
               ].map((s) => (
                 <li key={s}>
                   <a
-                    href="/#services"
+                    href={isMumbai ? "#services" : "/#services"}
                     className="text-sm text-muted-foreground hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="h-px w-4 bg-primary/40 group-hover:w-6 group-hover:bg-primary transition-all" />
@@ -130,9 +134,9 @@ export function Footer() {
                 { label: "About Us", href: "/about" },
                 { label: "Pricing Policy", href: "/pricing" },
                 { label: "Cities We Serve", href: "/#cities" },
-                { label: "How It Works", href: "/#how-it-works" },
-                { label: "FAQ", href: "/#faq" },
-                { label: "Contact / Book", href: "/#contact" },
+                { label: "How It Works", href: isMumbai ? "#how-it-works" : "/#how-it-works" },
+                { label: "FAQ", href: isMumbai ? "#faq" : "/#faq" },
+                { label: "Contact / Book", href: isMumbai ? "#contact" : "/#contact" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
