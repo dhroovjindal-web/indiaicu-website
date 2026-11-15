@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import { Phone, MessageSquare, Clock, MapPin, ShieldCheck, Network, Zap } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
@@ -21,6 +21,26 @@ const PHONE_TEL = `tel:+91${PHONE_NUMBER}`;
 const WHATSAPP_URL = "https://wa.me/918307744774?text=Emergency%20Ambulance%20Required%20in%20Mumbai";
 
 export default function Mumbai() {
+  useEffect(() => {
+    document.title = "24/7 ICU & Ventilator Ambulance Service in Mumbai | IndiaICU";
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute(
+        "content",
+        "Immediate 24/7 ICU, Ventilator, Oxygen, and Intercity Ambulance dispatch across Mumbai, Thane & Navi Mumbai. Under 30-minute ETA. Call 83077 44774."
+      );
+    }
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", "https://www.indiaicu.com/mumbai");
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
