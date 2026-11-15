@@ -6,7 +6,10 @@ import { trackPhoneCall, trackWhatsApp } from "@/lib/analytics";
 // Lazy-load sections below the fold
 const ServicesSection = lazy(() => import("@/components/ServicesSection").then(m => ({ default: m.ServicesSection })));
 const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
+const IntercitySection = lazy(() => import("@/components/IntercitySection").then(m => ({ default: m.IntercitySection })));
 const HowItWorks = lazy(() => import("@/components/HowItWorks").then(m => ({ default: m.HowItWorks })));
+const Testimonials = lazy(() => import("@/components/Testimonials").then(m => ({ default: m.Testimonials })));
+const FAQSection = lazy(() => import("@/components/FAQSection").then(m => ({ default: m.FAQSection })));
 const ContactSection = lazy(() => import("@/components/ContactSection").then(m => ({ default: m.ContactSection })));
 const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
 const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp").then(m => ({ default: m.FloatingWhatsApp })));
@@ -133,7 +136,10 @@ export default function Mumbai() {
         <Suspense fallback={<div className="py-12 bg-[#050b14]" />}>
           <ServicesSection />
           <WhyChooseUs />
+          <IntercitySection />
           <HowItWorks />
+          <Testimonials />
+          <FAQSection />
           <ContactSection />
         </Suspense>
       </main>
